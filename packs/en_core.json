@@ -1,0 +1,165 @@
+{
+  "happy": {
+    "syn": [
+      "glad",
+      "joyful",
+      "cheerful"
+    ],
+    "ant": [
+      "sad",
+      "unhappy"
+    ]
+  },
+  "sad": {
+    "syn": [
+      "unhappy",
+      "downcast"
+    ],
+    "ant": [
+      "happy",
+      "joyful"
+    ]
+  },
+  "fast": {
+    "syn": [
+      "quick",
+      "rapid",
+      "swift"
+    ],
+    "ant": [
+      "slow",
+      "sluggish"
+    ]
+  },
+  "slow": {
+    "syn": [
+      "sluggish",
+      "lethargic"
+    ],
+    "ant": [
+      "fast",
+      "quick"
+    ]
+  },
+  "big": {
+    "syn": [
+      "large",
+      "huge",
+      "enormous"
+    ],
+    "ant": [
+      "small",
+      "tiny"
+    ]
+  },
+  "small": {
+    "syn": [
+      "tiny",
+      "little"
+    ],
+    "ant": [
+      "big",
+      "large"
+    ]
+  },
+  "hot": {
+    "syn": [
+      "warm",
+      "scorching"
+    ],
+    "ant": [
+      "cold",
+      "chilly"
+    ]
+  },
+  "cold": {
+    "syn": [
+      "chilly",
+      "freezing"
+    ],
+    "ant": [
+      "hot",
+      "warm"
+    ]
+  },
+  "light": {
+    "syn": [
+      "bright",
+      "luminous"
+    ],
+    "ant": [
+      "dark",
+      "dim"
+    ]
+  },
+  "dark": {
+    "syn": [
+      "dim",
+      "gloomy"
+    ],
+    "ant": [
+      "light",
+      "bright"
+    ]
+  },
+  "clean": {
+    "syn": [
+      "tidy",
+      "neat"
+    ],
+    "ant": [
+      "dirty",
+      "messy"
+    ]
+  },
+  "dirty": {
+    "syn": [
+      "messy",
+      "filthy"
+    ],
+    "ant": [
+      "clean",
+      "tidy"
+    ]
+  },
+  "open": {
+    "syn": [
+      "unlocked",
+      "ajar"
+    ],
+    "ant": [
+      "closed",
+      "shut"
+    ]
+  },
+  "closed": {
+    "syn": [
+      "shut",
+      "sealed"
+    ],
+    "ant": [
+      "open",
+      "ajar"
+    ]
+  },
+  "strong": {
+    "syn": [
+      "powerful",
+      "robust"
+    ],
+    "ant": [
+      "weak",
+      "fragile"
+    ]
+  },
+  "weak": {
+    "syn": [
+      "fragile",
+      "feeble"
+    ],
+    "ant": [
+      "strong",
+      "robust"
+    ]
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "felice": {
+    "syn": [
+      "contento",
+      "gioioso",
+      "allegro",
+      "lieto"
+    ],
+    "ant": [
+      "triste",
+      "infelice",
+      "malinconico"
+    ]
+  },
+  "triste": {
+    "syn": [
+      "infelice",
+      "malinconico"
+    ],
+    "ant": [
+      "felice",
+      "allegro"
+    ]
+  },
+  "bello": {
+    "syn": [
+      "gradevole",
+      "splendido",
+      "avvenente"
+    ],
+    "ant": [
+      "brutto",
+      "sgradevole"
+    ]
+  },
+  "brutto": {
+    "syn": [
+      "sgradevole",
+      "orrendo"
+    ],
+    "ant": [
+      "bello",
+      "gradevole"
+    ]
+  },
+  "grande": {
+    "syn": [
+      "enorme",
+      "immenso",
+      "notevole"
+    ],
+    "ant": [
+      "piccolo",
+      "minuscolo"
+    ]
+  },
+  "piccolo": {
+    "syn": [
+      "minuto",
+      "minuscolo",
+      "ridotto"
+    ],
+    "ant": [
+      "grande",
+      "enorme"
+    ]
+  },
+  "alto": {
+    "syn": [
+      "elevato",
+      "svettante"
+    ],
+    "ant": [
+      "basso",
+      "umile"
+    ]
+  },
+  "basso": {
+    "syn": [
+      "ridotto",
+      "umile"
+    ],
+    "ant": [
+      "alto",
+      "elevato"
+    ]
+  },
+  "lungo": {
+    "syn": [
+      "esteso",
+      "prolungato"
+    ],
+    "ant": [
+      "corto",
+      "breve"
+    ]
+  },
+  "corto": {
+    "syn": [
+      "breve",
+      "conciso"
+    ],
+    "ant": [
+      "lungo",
+      "esteso"
+    ]
+  },
+  "largo": {
+    "syn": [
+      "ampio",
+      "spazioso"
+    ],
+    "ant": [
+      "stretto",
+      "angusto"
+    ]
+  },
+  "stretto": {
+    "syn": [
+      "angusto",
+      "ristretto"
+    ],
+    "ant": [
+      "largo",
+      "ampio"
+    ]
+  },
+  "caldo": {
+    "syn": [
+      "torrido",
+      "bollente"
+    ],
+    "ant": [
+      "freddo",
+      "gelido"
+    ]
+  },
+  "freddo": {
+    "syn": [
+      "gelido",
+      "rigido"
+    ],
+    "ant": [
+      "caldo",
+      "torrido"
+    ]
+  },
+  "veloce": {
+    "syn": [
+      "rapido",
+      "celere",
+      "svelto"
+    ],
+    "ant": [
+      "lento",
+      "tardo"
+    ]
+  },
+  "lento": {
+    "syn": [
+      "tardo",
+      "indolente"
+    ],
+    "ant": [
+      "rapido",
+      "veloce"
+    ]
+  },
+  "chiaro": {
+    "syn": [
+      "luminoso",
+      "nitido"
+    ],
+    "ant": [
+      "scuro",
+      "tenebroso"
+    ]
+  },
+  "scuro": {
+    "syn": [
+      "tenebroso",
+      "buio"
+    ],
+    "ant": [
+      "chiaro",
+      "luminoso"
+    ]
+  },
+  "pulito": {
+    "syn": [
+      "nitido",
+      "immacolato",
+      "candido"
+    ],
+    "ant": [
+      "sporco",
+      "sudicio"
+    ]
+  },
+  "sporco": {
+    "syn": [
+      "lercio",
+      "sudicio"
+    ],
+    "ant": [
+      "pulito",
+      "candido"
+    ]
+  },
+  "giusto": {
+    "syn": [
+      "corretto",
+      "equanime"
+    ],
+    "ant": [
+      "sbagliato",
+      "ingiusto"
+    ]
+  },
+  "sbagliato": {
+    "syn": [
+      "errato",
+      "inesatto"
+    ],
+    "ant": [
+      "giusto",
+      "corretto"
+    ]
+  },
+  "forte": {
+    "syn": [
+      "robusto",
+      "potente",
+      "vigoroso"
+    ],
+    "ant": [
+      "debole",
+      "fragile"
+    ]
+  },
+  "debole": {
+    "syn": [
+      "fragile",
+      "esile"
+    ],
+    "ant": [
+      "forte",
+      "robusto"
+    ]
+  },
+  "inizio": {
+    "syn": [
+      "principio",
+      "avvio"
+    ],
+    "ant": [
+      "fine",
+      "termine"
+    ]
+  },
+  "fine": {
+    "syn": [
+      "termine",
+      "epilogo"
+    ],
+    "ant": [
+      "inizio",
+      "principio"
+    ]
+  }
+}
