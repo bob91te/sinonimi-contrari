@@ -2,45 +2,354 @@
   "felice": {
     "syn": [
       "contento",
-      "gioioso",
       "allegro",
+      "gioioso",
       "lieto"
     ],
     "ant": [
-      "triste",
-      "infelice",
-      "malinconico"
+      "triste"
     ]
   },
   "triste": {
     "syn": [
       "infelice",
-      "malinconico"
+      "malinconico",
+      "avvilito"
     ],
     "ant": [
-      "felice",
-      "allegro"
+      "felice"
     ]
   },
-  "bello": {
+  "sereno": {
     "syn": [
-      "gradevole",
-      "splendido",
-      "avvenente"
+      "tranquillo",
+      "pacato",
+      "disteso",
+      "limpido",
+      "sgombro"
     ],
     "ant": [
-      "brutto",
-      "sgradevole"
+      "agitato",
+      "nuvoloso"
     ]
   },
-  "brutto": {
+  "agitato": {
     "syn": [
-      "sgradevole",
-      "orrendo"
+      "inquieto",
+      "turbato",
+      "concitato"
     ],
     "ant": [
-      "bello",
-      "gradevole"
+      "sereno"
+    ]
+  },
+  "calmo": {
+    "syn": [
+      "placido",
+      "rasserenato"
+    ],
+    "ant": [
+      "nervoso"
+    ]
+  },
+  "nervoso": {
+    "syn": [
+      "irritabile",
+      "teso",
+      "ansioso"
+    ],
+    "ant": [
+      "calmo"
+    ]
+  },
+  "ottimista": {
+    "syn": [
+      "positivo",
+      "fiducioso"
+    ],
+    "ant": [
+      "pessimista"
+    ]
+  },
+  "pessimista": {
+    "syn": [
+      "negativo",
+      "disfattista"
+    ],
+    "ant": [
+      "ottimista"
+    ]
+  },
+  "timido": {
+    "syn": [
+      "riservato",
+      "schivo"
+    ],
+    "ant": [
+      "sfacciato"
+    ]
+  },
+  "sfacciato": {
+    "syn": [
+      "sfrontato",
+      "spudorato"
+    ],
+    "ant": [
+      "timido"
+    ]
+  },
+  "orgoglioso": {
+    "syn": [
+      "fiero",
+      "altero"
+    ],
+    "ant": [
+      "umile"
+    ]
+  },
+  "umile": {
+    "syn": [
+      "modesto",
+      "semplice"
+    ],
+    "ant": [
+      "orgoglioso",
+      "superbo"
+    ]
+  },
+  "geloso": {
+    "syn": [
+      "invidioso",
+      "sospettoso"
+    ],
+    "ant": [
+      "fiducioso"
+    ]
+  },
+  "fiducioso": {
+    "syn": [
+      "confidente",
+      "sicuro"
+    ],
+    "ant": [
+      "geloso"
+    ]
+  },
+  "altruista": {
+    "syn": [
+      "generoso",
+      "filantropo"
+    ],
+    "ant": [
+      "egoista"
+    ]
+  },
+  "egoista": {
+    "syn": [
+      "individualista",
+      "egocentrico"
+    ],
+    "ant": [
+      "altruista"
+    ]
+  },
+  "gentile": {
+    "syn": [
+      "cortese",
+      "garbato"
+    ],
+    "ant": [
+      "scortese"
+    ]
+  },
+  "scortese": {
+    "syn": [
+      "maleducato",
+      "ruvido"
+    ],
+    "ant": [
+      "gentile"
+    ]
+  },
+  "grato": {
+    "syn": [
+      "riconoscente"
+    ],
+    "ant": [
+      "ingrato"
+    ]
+  },
+  "ingrato": {
+    "syn": [
+      "smemorato",
+      "irriconoscente"
+    ],
+    "ant": [
+      "grato"
+    ]
+  },
+  "onesto": {
+    "syn": [
+      "integerrimo",
+      "leale"
+    ],
+    "ant": [
+      "disonesto"
+    ]
+  },
+  "disonesto": {
+    "syn": [
+      "sleale",
+      "truffaldino"
+    ],
+    "ant": [
+      "onesto"
+    ]
+  },
+  "sincero": {
+    "syn": [
+      "schietto",
+      "franco"
+    ],
+    "ant": [
+      "ipocrita"
+    ]
+  },
+  "ipocrita": {
+    "syn": [
+      "falso",
+      "dissimulatore"
+    ],
+    "ant": [
+      "sincero"
+    ]
+  },
+  "coraggioso": {
+    "syn": [
+      "ardito",
+      "intrepido"
+    ],
+    "ant": [
+      "codardo"
+    ]
+  },
+  "codardo": {
+    "syn": [
+      "vigliacco",
+      "pauroso"
+    ],
+    "ant": [
+      "coraggioso"
+    ]
+  },
+  "paziente": {
+    "syn": [
+      "tollerante",
+      "calmo"
+    ],
+    "ant": [
+      "impaziente"
+    ]
+  },
+  "impaziente": {
+    "syn": [
+      "frettoloso",
+      "irrequieto"
+    ],
+    "ant": [
+      "paziente"
+    ]
+  },
+  "generoso": {
+    "syn": [
+      "largheggiante",
+      "altruista"
+    ],
+    "ant": [
+      "avaro"
+    ]
+  },
+  "avaro": {
+    "syn": [
+      "spilorcio",
+      "tirchio"
+    ],
+    "ant": [
+      "generoso"
+    ]
+  },
+  "ordinato": {
+    "syn": [
+      "metodico",
+      "pulito"
+    ],
+    "ant": [
+      "disordinato"
+    ]
+  },
+  "disordinato": {
+    "syn": [
+      "caotico",
+      "confusionario"
+    ],
+    "ant": [
+      "ordinato"
+    ]
+  },
+  "puntuale": {
+    "syn": [
+      "preciso",
+      "sollecito"
+    ],
+    "ant": [
+      "ritardatario"
+    ]
+  },
+  "ritardatario": {
+    "syn": [
+      "tardivo",
+      "lento"
+    ],
+    "ant": [
+      "puntuale"
+    ]
+  },
+  "prudente": {
+    "syn": [
+      "cauto",
+      "accorto",
+      "guardingo"
+    ],
+    "ant": [
+      "imprudente",
+      "audace"
+    ]
+  },
+  "imprudente": {
+    "syn": [
+      "avventato",
+      "sconsiderato"
+    ],
+    "ant": [
+      "prudente"
+    ]
+  },
+  "umoristico": {
+    "syn": [
+      "spiritoso",
+      "ironico"
+    ],
+    "ant": [
+      "serioso"
+    ]
+  },
+  "serioso": {
+    "syn": [
+      "grave",
+      "compassato"
+    ],
+    "ant": [
+      "umoristico"
     ]
   },
   "grande": {
@@ -50,19 +359,17 @@
       "notevole"
     ],
     "ant": [
-      "piccolo",
-      "minuscolo"
+      "piccolo"
     ]
   },
   "piccolo": {
     "syn": [
-      "minuto",
       "minuscolo",
+      "minuto",
       "ridotto"
     ],
     "ant": [
-      "grande",
-      "enorme"
+      "grande"
     ]
   },
   "alto": {
@@ -71,18 +378,16 @@
       "svettante"
     ],
     "ant": [
-      "basso",
-      "umile"
+      "basso"
     ]
   },
   "basso": {
     "syn": [
-      "ridotto",
+      "rasoterra",
       "umile"
     ],
     "ant": [
-      "alto",
-      "elevato"
+      "alto"
     ]
   },
   "lungo": {
@@ -91,8 +396,7 @@
       "prolungato"
     ],
     "ant": [
-      "corto",
-      "breve"
+      "corto"
     ]
   },
   "corto": {
@@ -101,8 +405,7 @@
       "conciso"
     ],
     "ant": [
-      "lungo",
-      "esteso"
+      "lungo"
     ]
   },
   "largo": {
@@ -111,8 +414,7 @@
       "spazioso"
     ],
     "ant": [
-      "stretto",
-      "angusto"
+      "stretto"
     ]
   },
   "stretto": {
@@ -121,59 +423,195 @@
       "ristretto"
     ],
     "ant": [
-      "largo",
-      "ampio"
+      "largo"
     ]
   },
-  "caldo": {
+  "pesante": {
     "syn": [
-      "torrido",
-      "bollente"
+      "gravoso",
+      "massiccio"
     ],
     "ant": [
-      "freddo",
-      "gelido"
+      "leggero"
     ]
   },
-  "freddo": {
+  "leggero": {
     "syn": [
-      "gelido",
-      "rigido"
+      "lieve",
+      "piuma"
     ],
     "ant": [
-      "caldo",
-      "torrido"
+      "pesante"
     ]
   },
-  "veloce": {
+  "denso": {
     "syn": [
-      "rapido",
-      "celere",
-      "svelto"
+      "compatto",
+      "fitto"
     ],
     "ant": [
-      "lento",
-      "tardo"
+      "raro"
     ]
   },
-  "lento": {
+  "raro": {
     "syn": [
-      "tardo",
-      "indolente"
+      "diradato",
+      "lieve",
+      "sporadico",
+      "saltuario"
     ],
     "ant": [
-      "rapido",
-      "veloce"
+      "denso",
+      "frequente"
+    ]
+  },
+  "spesso": {
+    "syn": [
+      "grosso",
+      "compatto"
+    ],
+    "ant": [
+      "sottile"
+    ]
+  },
+  "sottile": {
+    "syn": [
+      "fine",
+      "assottigliato"
+    ],
+    "ant": [
+      "spesso"
+    ]
+  },
+  "pieno": {
+    "syn": [
+      "colmo",
+      "saturo",
+      "zeppo"
+    ],
+    "ant": [
+      "vuoto"
+    ]
+  },
+  "vuoto": {
+    "syn": [
+      "cavo",
+      "scarico",
+      "scarno",
+      "spoglio"
+    ],
+    "ant": [
+      "pieno"
+    ]
+  },
+  "molto": {
+    "syn": [
+      "tanto",
+      "parecchio",
+      "abbondante"
+    ],
+    "ant": [
+      "poco"
+    ]
+  },
+  "poco": {
+    "syn": [
+      "scarso",
+      "esiguo"
+    ],
+    "ant": [
+      "molto"
+    ]
+  },
+  "ricco": {
+    "syn": [
+      "agiato",
+      "facoltoso",
+      "benestante"
+    ],
+    "ant": [
+      "povero"
+    ]
+  },
+  "povero": {
+    "syn": [
+      "indigente",
+      "miserabile",
+      "bisognoso"
+    ],
+    "ant": [
+      "ricco"
+    ]
+  },
+  "forte": {
+    "syn": [
+      "robusto",
+      "vigoroso",
+      "potente",
+      "resistente"
+    ],
+    "ant": [
+      "debole"
+    ]
+  },
+  "debole": {
+    "syn": [
+      "fragile",
+      "esile",
+      "stanco"
+    ],
+    "ant": [
+      "forte"
+    ]
+  },
+  "duro": {
+    "syn": [
+      "rigido",
+      "tosto"
+    ],
+    "ant": [
+      "molle"
+    ]
+  },
+  "molle": {
+    "syn": [
+      "soffice",
+      "tenero"
+    ],
+    "ant": [
+      "duro"
+    ]
+  },
+  "profondo": {
+    "syn": [
+      "abissale",
+      "intenso"
+    ],
+    "ant": [
+      "superficiale"
+    ]
+  },
+  "superficiale": {
+    "syn": [
+      "apparente",
+      "leggero"
+    ],
+    "ant": [
+      "profondo"
     ]
   },
   "chiaro": {
     "syn": [
       "luminoso",
-      "nitido"
+      "nitido",
+      "esplicito",
+      "comprensibile",
+      "trasparente"
     ],
     "ant": [
       "scuro",
-      "tenebroso"
+      "confuso",
+      "oscuro"
     ]
   },
   "scuro": {
@@ -182,19 +620,16 @@
       "buio"
     ],
     "ant": [
-      "chiaro",
-      "luminoso"
+      "chiaro"
     ]
   },
   "pulito": {
     "syn": [
-      "nitido",
       "immacolato",
-      "candido"
+      "nitido"
     ],
     "ant": [
-      "sporco",
-      "sudicio"
+      "sporco"
     ]
   },
   "sporco": {
@@ -203,49 +638,46 @@
       "sudicio"
     ],
     "ant": [
-      "pulito",
-      "candido"
+      "pulito"
     ]
   },
-  "giusto": {
+  "secco": {
     "syn": [
-      "corretto",
-      "equanime"
+      "arido",
+      "asciutto",
+      "brullo"
     ],
     "ant": [
-      "sbagliato",
-      "ingiusto"
+      "umido"
     ]
   },
-  "sbagliato": {
+  "umido": {
     "syn": [
-      "errato",
-      "inesatto"
+      "bagnato",
+      "madido"
     ],
     "ant": [
-      "giusto",
-      "corretto"
+      "secco"
     ]
   },
-  "forte": {
+  "nuovo": {
     "syn": [
-      "robusto",
-      "potente",
-      "vigoroso"
+      "recente",
+      "inedito",
+      "fresco"
     ],
     "ant": [
-      "debole",
-      "fragile"
+      "vecchio",
+      "usato"
     ]
   },
-  "debole": {
+  "vecchio": {
     "syn": [
-      "fragile",
-      "esile"
+      "antico",
+      "obsoleto"
     ],
     "ant": [
-      "forte",
-      "robusto"
+      "nuovo"
     ]
   },
   "inizio": {
@@ -254,8 +686,7 @@
       "avvio"
     ],
     "ant": [
-      "fine",
-      "termine"
+      "fine"
     ]
   },
   "fine": {
@@ -264,8 +695,1905 @@
       "epilogo"
     ],
     "ant": [
-      "inizio",
-      "principio"
+      "inizio"
+    ]
+  },
+  "presto": {
+    "syn": [
+      "di buonora",
+      "anticipatamente"
+    ],
+    "ant": [
+      "tardi"
+    ]
+  },
+  "tardi": {
+    "syn": [
+      "in ritardo",
+      "poi"
+    ],
+    "ant": [
+      "presto"
+    ]
+  },
+  "rapido": {
+    "syn": [
+      "veloce",
+      "celere"
+    ],
+    "ant": [
+      "lento"
+    ]
+  },
+  "lento": {
+    "syn": [
+      "tardo",
+      "indolente"
+    ],
+    "ant": [
+      "rapido"
+    ]
+  },
+  "immediato": {
+    "syn": [
+      "istantaneo",
+      "subitaneo"
+    ],
+    "ant": [
+      "graduale"
+    ]
+  },
+  "graduale": {
+    "syn": [
+      "progressivo",
+      "lento"
+    ],
+    "ant": [
+      "immediato"
+    ]
+  },
+  "moderno": {
+    "syn": [
+      "contemporaneo",
+      "attuale"
+    ],
+    "ant": [
+      "antico"
+    ]
+  },
+  "antico": {
+    "syn": [
+      "vetusto",
+      "remoto"
+    ],
+    "ant": [
+      "moderno"
+    ]
+  },
+  "salire": {
+    "syn": [
+      "ascendere",
+      "montare",
+      "imboccare"
+    ],
+    "ant": [
+      "scendere"
+    ]
+  },
+  "scendere": {
+    "syn": [
+      "discendere",
+      "precipitare",
+      "smontare"
+    ],
+    "ant": [
+      "salire"
+    ]
+  },
+  "entrare": {
+    "syn": [
+      "accedere",
+      "penetrare"
+    ],
+    "ant": [
+      "uscire"
+    ]
+  },
+  "uscire": {
+    "syn": [
+      "sortire",
+      "andarsene"
+    ],
+    "ant": [
+      "entrare"
+    ]
+  },
+  "aprire": {
+    "syn": [
+      "spalancare",
+      "dischiudere",
+      "lanciare",
+      "avviare"
+    ],
+    "ant": [
+      "chiudere"
+    ]
+  },
+  "chiudere": {
+    "syn": [
+      "serrare",
+      "sigillare",
+      "terminare",
+      "uscire"
+    ],
+    "ant": [
+      "aprire"
+    ]
+  },
+  "accendere": {
+    "syn": [
+      "avviare",
+      "attivare"
+    ],
+    "ant": [
+      "spegnere"
+    ]
+  },
+  "spegnere": {
+    "syn": [
+      "disattivare",
+      "estinguere"
+    ],
+    "ant": [
+      "accendere"
+    ]
+  },
+  "avvicinare": {
+    "syn": [
+      "approssimare",
+      "accostare"
+    ],
+    "ant": [
+      "allontanare"
+    ]
+  },
+  "allontanare": {
+    "syn": [
+      "distanziare",
+      "separare"
+    ],
+    "ant": [
+      "avvicinare"
+    ]
+  },
+  "alzare": {
+    "syn": [
+      "sollevare",
+      "innalzare"
+    ],
+    "ant": [
+      "abbassare"
+    ]
+  },
+  "abbassare": {
+    "syn": [
+      "ridurre",
+      "calare"
+    ],
+    "ant": [
+      "alzare"
+    ]
+  },
+  "spingere": {
+    "syn": [
+      "premere",
+      "impellere"
+    ],
+    "ant": [
+      "tirare"
+    ]
+  },
+  "tirare": {
+    "syn": [
+      "trainare",
+      "attrarre"
+    ],
+    "ant": [
+      "spingere"
+    ]
+  },
+  "prendere": {
+    "syn": [
+      "afferrare",
+      "acchiappare",
+      "ricevere"
+    ],
+    "ant": [
+      "lasciare",
+      "dare"
+    ]
+  },
+  "lasciare": {
+    "syn": [
+      "mollare",
+      "abbandonare"
+    ],
+    "ant": [
+      "prendere"
+    ]
+  },
+  "arrivare": {
+    "syn": [
+      "giungere",
+      "pervenire",
+      "approdare"
+    ],
+    "ant": [
+      "partire"
+    ]
+  },
+  "partire": {
+    "syn": [
+      "andare via",
+      "muoversi",
+      "salpare"
+    ],
+    "ant": [
+      "arrivare"
+    ]
+  },
+  "entusiasmare": {
+    "syn": [
+      "esaltare",
+      "infervorare"
+    ],
+    "ant": [
+      "deludere"
+    ]
+  },
+  "deludere": {
+    "syn": [
+      "smorzare",
+      "amareggiare"
+    ],
+    "ant": [
+      "entusiasmare"
+    ]
+  },
+  "intelligente": {
+    "syn": [
+      "acuto",
+      "brillante",
+      "sveglio"
+    ],
+    "ant": [
+      "stupido"
+    ]
+  },
+  "stupido": {
+    "syn": [
+      "sciocco",
+      "ottuso"
+    ],
+    "ant": [
+      "intelligente"
+    ]
+  },
+  "attento": {
+    "syn": [
+      "vigile",
+      "concentrato",
+      "accorto"
+    ],
+    "ant": [
+      "distratto"
+    ]
+  },
+  "distratto": {
+    "syn": [
+      "svagato",
+      "sbadato"
+    ],
+    "ant": [
+      "attento"
+    ]
+  },
+  "preciso": {
+    "syn": [
+      "esatto",
+      "accurato",
+      "puntuale"
+    ],
+    "ant": [
+      "impreciso",
+      "approssimativo"
+    ]
+  },
+  "impreciso": {
+    "syn": [
+      "vago",
+      "approssimativo"
+    ],
+    "ant": [
+      "preciso"
+    ]
+  },
+  "facile": {
+    "syn": [
+      "semplice",
+      "agevole"
+    ],
+    "ant": [
+      "difficile"
+    ]
+  },
+  "difficile": {
+    "syn": [
+      "arduo",
+      "complesso"
+    ],
+    "ant": [
+      "facile"
+    ]
+  },
+  "utile": {
+    "syn": [
+      "vantaggioso",
+      "proficuo",
+      "profícuo"
+    ],
+    "ant": [
+      "inutile",
+      "nocivo"
+    ]
+  },
+  "inutile": {
+    "syn": [
+      "vano",
+      "improduttivo"
+    ],
+    "ant": [
+      "utile"
+    ]
+  },
+  "confuso": {
+    "syn": [
+      "oscuro",
+      "intricato"
+    ],
+    "ant": [
+      "chiaro"
+    ]
+  },
+  "logico": {
+    "syn": [
+      "razionale",
+      "coerente"
+    ],
+    "ant": [
+      "illogico"
+    ]
+  },
+  "illogico": {
+    "syn": [
+      "irrazionale",
+      "contraddittorio"
+    ],
+    "ant": [
+      "logico"
+    ]
+  },
+  "assumere": {
+    "syn": [
+      "ingaggiare",
+      "impiegare"
+    ],
+    "ant": [
+      "licenziare"
+    ]
+  },
+  "licenziare": {
+    "syn": [
+      "congedare",
+      "allontanare"
+    ],
+    "ant": [
+      "assumere"
+    ]
+  },
+  "promuovere": {
+    "syn": [
+      "avanzare",
+      "favorire"
+    ],
+    "ant": [
+      "retrocedere"
+    ]
+  },
+  "retrocedere": {
+    "syn": [
+      "declassare",
+      "arretrare"
+    ],
+    "ant": [
+      "promuovere"
+    ]
+  },
+  "aumentare": {
+    "syn": [
+      "accrescere",
+      "incrementare"
+    ],
+    "ant": [
+      "ridurre"
+    ]
+  },
+  "ridurre": {
+    "syn": [
+      "diminuire",
+      "calare"
+    ],
+    "ant": [
+      "aumentare"
+    ]
+  },
+  "pagare": {
+    "syn": [
+      "corrispondere",
+      "retribuire"
+    ],
+    "ant": [
+      "incassare"
+    ]
+  },
+  "incassare": {
+    "syn": [
+      "riscossare",
+      "percepire"
+    ],
+    "ant": [
+      "pagare"
+    ]
+  },
+  "insegnare": {
+    "syn": [
+      "educare",
+      "istruire"
+    ],
+    "ant": [
+      "imparare"
+    ]
+  },
+  "imparare": {
+    "syn": [
+      "studiare",
+      "apprendere"
+    ],
+    "ant": [
+      "insegnare"
+    ]
+  },
+  "lavorare": {
+    "syn": [
+      "operare",
+      "faticare"
+    ],
+    "ant": [
+      "riposare"
+    ]
+  },
+  "riposare": {
+    "syn": [
+      "oziare",
+      "riposarsi"
+    ],
+    "ant": [
+      "lavorare"
+    ]
+  },
+  "guidare": {
+    "syn": [
+      "condurre",
+      "pilotare"
+    ],
+    "ant": [
+      "seguire",
+      "camminare"
+    ]
+  },
+  "seguire": {
+    "syn": [
+      "accompagnare",
+      "ubbidire"
+    ],
+    "ant": [
+      "guidare"
+    ]
+  },
+  "caricare": {
+    "syn": [
+      "uploadare",
+      "inviare"
+    ],
+    "ant": [
+      "scaricare"
+    ]
+  },
+  "scaricare": {
+    "syn": [
+      "downloadare",
+      "prelevare"
+    ],
+    "ant": [
+      "caricare"
+    ]
+  },
+  "connettere": {
+    "syn": [
+      "collegare",
+      "associare"
+    ],
+    "ant": [
+      "disconnettere"
+    ]
+  },
+  "disconnettere": {
+    "syn": [
+      "scollegare",
+      "separare"
+    ],
+    "ant": [
+      "connettere"
+    ]
+  },
+  "salvare": {
+    "syn": [
+      "memorizzare",
+      "archiviare"
+    ],
+    "ant": [
+      "cancellare"
+    ]
+  },
+  "cancellare": {
+    "syn": [
+      "eliminare",
+      "rimuovere",
+      "raschiare"
+    ],
+    "ant": [
+      "salvare",
+      "scrivere"
+    ]
+  },
+  "aggiornare": {
+    "syn": [
+      "allineare",
+      "ammodernare"
+    ],
+    "ant": [
+      "ripristinare"
+    ]
+  },
+  "ripristinare": {
+    "syn": [
+      "rollback",
+      "ristabilire"
+    ],
+    "ant": [
+      "aggiornare"
+    ]
+  },
+  "caldo": {
+    "syn": [
+      "torrido",
+      "bollente"
+    ],
+    "ant": [
+      "freddo"
+    ]
+  },
+  "freddo": {
+    "syn": [
+      "gelido",
+      "rigido",
+      "distaccato"
+    ],
+    "ant": [
+      "caldo",
+      "caloroso"
+    ]
+  },
+  "nuvoloso": {
+    "syn": [
+      "coperto",
+      "annuvolato"
+    ],
+    "ant": [
+      "sereno"
+    ]
+  },
+  "pioggia": {
+    "syn": [
+      "acquazzone",
+      "rovescio"
+    ],
+    "ant": [
+      "siccitá"
+    ]
+  },
+  "siccitá": {
+    "syn": [
+      "aridità",
+      "assenza di pioggia"
+    ],
+    "ant": [
+      "pioggia"
+    ]
+  },
+  "vento": {
+    "syn": [
+      "brezza",
+      "soffio"
+    ],
+    "ant": [
+      "bonaccia"
+    ]
+  },
+  "bonaccia": {
+    "syn": [
+      "calma piatta"
+    ],
+    "ant": [
+      "vento"
+    ]
+  },
+  "dolce": {
+    "syn": [
+      "zuccherato",
+      "mielato"
+    ],
+    "ant": [
+      "amaro"
+    ]
+  },
+  "amaro": {
+    "syn": [
+      "acre",
+      "aspro"
+    ],
+    "ant": [
+      "dolce"
+    ]
+  },
+  "salato": {
+    "syn": [
+      "sapido",
+      "gustoso"
+    ],
+    "ant": [
+      "sciapo"
+    ]
+  },
+  "sciapo": {
+    "syn": [
+      "insipido",
+      "scondito"
+    ],
+    "ant": [
+      "salato"
+    ]
+  },
+  "fresco": {
+    "syn": [
+      "appena fatto",
+      "novello"
+    ],
+    "ant": [
+      "stale"
+    ]
+  },
+  "stale": {
+    "syn": [
+      "vecchio",
+      "raffermo"
+    ],
+    "ant": [
+      "fresco"
+    ]
+  },
+  "cotto": {
+    "syn": [
+      "preparato",
+      "lessato"
+    ],
+    "ant": [
+      "crudo"
+    ]
+  },
+  "crudo": {
+    "syn": [
+      "al naturale",
+      "non cotto"
+    ],
+    "ant": [
+      "cotto"
+    ]
+  },
+  "magro": {
+    "syn": [
+      "leggero",
+      "scremato"
+    ],
+    "ant": [
+      "grasso"
+    ]
+  },
+  "grasso": {
+    "syn": [
+      "unto",
+      "calorico"
+    ],
+    "ant": [
+      "magro"
+    ]
+  },
+  "sano": {
+    "syn": [
+      "in salute",
+      "robusto"
+    ],
+    "ant": [
+      "malato"
+    ]
+  },
+  "malato": {
+    "syn": [
+      "ammalato",
+      "infermo"
+    ],
+    "ant": [
+      "sano"
+    ]
+  },
+  "curare": {
+    "syn": [
+      "medicare",
+      "trattare"
+    ],
+    "ant": [
+      "trascurare"
+    ]
+  },
+  "trascurare": {
+    "syn": [
+      "ommettere",
+      "ignorare",
+      "tralasciare"
+    ],
+    "ant": [
+      "curare",
+      "allenare"
+    ]
+  },
+  "riposo": {
+    "syn": [
+      "pausa",
+      "sosta"
+    ],
+    "ant": [
+      "sforzo"
+    ]
+  },
+  "sforzo": {
+    "syn": [
+      "fatica",
+      "lavoro"
+    ],
+    "ant": [
+      "riposo"
+    ]
+  },
+  "amico": {
+    "syn": [
+      "alleato",
+      "compagno"
+    ],
+    "ant": [
+      "nemico"
+    ]
+  },
+  "nemico": {
+    "syn": [
+      "avversario",
+      "rivale"
+    ],
+    "ant": [
+      "amico"
+    ]
+  },
+  "amare": {
+    "syn": [
+      "adorare",
+      "volere bene"
+    ],
+    "ant": [
+      "odiare"
+    ]
+  },
+  "odiare": {
+    "syn": [
+      "detestare",
+      "aborrire"
+    ],
+    "ant": [
+      "amare"
+    ]
+  },
+  "aiutare": {
+    "syn": [
+      "sostenere",
+      "assistire"
+    ],
+    "ant": [
+      "ostacolare"
+    ]
+  },
+  "ostacolare": {
+    "syn": [
+      "impedire",
+      "intranciare"
+    ],
+    "ant": [
+      "aiutare"
+    ]
+  },
+  "unire": {
+    "syn": [
+      "aggregare",
+      "congiungere"
+    ],
+    "ant": [
+      "dividere"
+    ]
+  },
+  "dividere": {
+    "syn": [
+      "separare",
+      "scindere"
+    ],
+    "ant": [
+      "unire"
+    ]
+  },
+  "accogliere": {
+    "syn": [
+      "ospitare",
+      "ricevere"
+    ],
+    "ant": [
+      "respingere"
+    ]
+  },
+  "respingere": {
+    "syn": [
+      "rifiutare",
+      "allontanare"
+    ],
+    "ant": [
+      "accogliere"
+    ]
+  },
+  "giusto": {
+    "syn": [
+      "corretto",
+      "equo"
+    ],
+    "ant": [
+      "sbagliato"
+    ]
+  },
+  "sbagliato": {
+    "syn": [
+      "errato",
+      "ingiusto"
+    ],
+    "ant": [
+      "giusto"
+    ]
+  },
+  "legale": {
+    "syn": [
+      "lecito",
+      "regolare"
+    ],
+    "ant": [
+      "illegale"
+    ]
+  },
+  "illegale": {
+    "syn": [
+      "illecito",
+      "abusivo"
+    ],
+    "ant": [
+      "legale"
+    ]
+  },
+  "colpevole": {
+    "syn": [
+      "responsabile",
+      "reo"
+    ],
+    "ant": [
+      "innocente"
+    ]
+  },
+  "innocente": {
+    "syn": [
+      "candido",
+      "non colpevole"
+    ],
+    "ant": [
+      "colpevole"
+    ]
+  },
+  "libero": {
+    "syn": [
+      "autonomo",
+      "indipendente"
+    ],
+    "ant": [
+      "prigioniero"
+    ]
+  },
+  "prigioniero": {
+    "syn": [
+      "recluso",
+      "detenuto"
+    ],
+    "ant": [
+      "libero"
+    ]
+  },
+  "vietato": {
+    "syn": [
+      "proibito",
+      "interdetto"
+    ],
+    "ant": [
+      "permesso"
+    ]
+  },
+  "permesso": {
+    "syn": [
+      "consentito",
+      "ammesso"
+    ],
+    "ant": [
+      "vietato"
+    ]
+  },
+  "risparmiare": {
+    "syn": [
+      "economizzare",
+      "accantonare"
+    ],
+    "ant": [
+      "spendere"
+    ]
+  },
+  "spendere": {
+    "syn": [
+      "dilapidare",
+      "investire"
+    ],
+    "ant": [
+      "risparmiare"
+    ]
+  },
+  "guadagnare": {
+    "syn": [
+      "incassare",
+      "ottenere"
+    ],
+    "ant": [
+      "perdere"
+    ]
+  },
+  "perdere": {
+    "syn": [
+      "smarrire",
+      "mancare",
+      "soccombere",
+      "fallire"
+    ],
+    "ant": [
+      "guadagnare",
+      "vincere"
+    ]
+  },
+  "comprare": {
+    "syn": [
+      "acquistare",
+      "procurarsi"
+    ],
+    "ant": [
+      "vendere"
+    ]
+  },
+  "vendere": {
+    "syn": [
+      "cedere",
+      "alienare"
+    ],
+    "ant": [
+      "comprare"
+    ]
+  },
+  "caro": {
+    "syn": [
+      "costoso",
+      "oneroso"
+    ],
+    "ant": [
+      "economico"
+    ]
+  },
+  "economico": {
+    "syn": [
+      "a buon mercato",
+      "conveniente"
+    ],
+    "ant": [
+      "caro"
+    ]
+  },
+  "pulire": {
+    "syn": [
+      "detergere",
+      "spolverare"
+    ],
+    "ant": [
+      "sporcare"
+    ]
+  },
+  "sporcare": {
+    "syn": [
+      "insudiciare",
+      "macchiare"
+    ],
+    "ant": [
+      "pulire"
+    ]
+  },
+  "costruire": {
+    "syn": [
+      "edificare",
+      "realizzare"
+    ],
+    "ant": [
+      "demolire"
+    ]
+  },
+  "demolire": {
+    "syn": [
+      "abbattere",
+      "buttare giù"
+    ],
+    "ant": [
+      "costruire"
+    ]
+  },
+  "riparare": {
+    "syn": [
+      "aggiustare",
+      "sistemare"
+    ],
+    "ant": [
+      "rompere"
+    ]
+  },
+  "rompere": {
+    "syn": [
+      "guastare",
+      "spezzare"
+    ],
+    "ant": [
+      "riparare"
+    ]
+  },
+  "camminare": {
+    "syn": [
+      "procedere a piedi",
+      "marciare",
+      "passeggiare",
+      "andare piano"
+    ],
+    "ant": [
+      "guidare",
+      "correre"
+    ]
+  },
+  "accelerare": {
+    "syn": [
+      "velocizzare",
+      "affrettare"
+    ],
+    "ant": [
+      "rallentare"
+    ]
+  },
+  "rallentare": {
+    "syn": [
+      "decelerare",
+      "frenare"
+    ],
+    "ant": [
+      "accelerare"
+    ]
+  },
+  "vincere": {
+    "syn": [
+      "trionfare",
+      "prevalere"
+    ],
+    "ant": [
+      "perdere"
+    ]
+  },
+  "attaccare": {
+    "syn": [
+      "assaltare",
+      "offendere"
+    ],
+    "ant": [
+      "difendere"
+    ]
+  },
+  "difendere": {
+    "syn": [
+      "proteggere",
+      "parare"
+    ],
+    "ant": [
+      "attaccare"
+    ]
+  },
+  "allenare": {
+    "syn": [
+      "addestrare",
+      "preparare"
+    ],
+    "ant": [
+      "trascurare"
+    ]
+  },
+  "correre": {
+    "syn": [
+      "gareggiare",
+      "scattare",
+      "sprintare"
+    ],
+    "ant": [
+      "camminare"
+    ]
+  },
+  "saltare": {
+    "syn": [
+      "balzare",
+      "sobbalzare"
+    ],
+    "ant": [
+      "cadere"
+    ]
+  },
+  "cadere": {
+    "syn": [
+      "precipitare",
+      "crollare"
+    ],
+    "ant": [
+      "saltare"
+    ]
+  },
+  "parlare": {
+    "syn": [
+      "conversare",
+      "discorrere"
+    ],
+    "ant": [
+      "tacere"
+    ]
+  },
+  "tacere": {
+    "syn": [
+      "silenziare",
+      "ammutolire"
+    ],
+    "ant": [
+      "parlare"
+    ]
+  },
+  "vedere": {
+    "syn": [
+      "scorgere",
+      "osservare"
+    ],
+    "ant": [
+      "ignorare"
+    ]
+  },
+  "ignorare": {
+    "syn": [
+      "trascurare",
+      "non vedere",
+      "non sentire",
+      "tralasciare"
+    ],
+    "ant": [
+      "vedere",
+      "udire",
+      "leggere"
+    ]
+  },
+  "udire": {
+    "syn": [
+      "sentire",
+      "ascoltare"
+    ],
+    "ant": [
+      "ignorare"
+    ]
+  },
+  "pensare": {
+    "syn": [
+      "riflettere",
+      "meditare"
+    ],
+    "ant": [
+      "dimenticare"
+    ]
+  },
+  "dimenticare": {
+    "syn": [
+      "scordare",
+      "tralasciare",
+      "omettere"
+    ],
+    "ant": [
+      "pensare",
+      "ricordare"
+    ]
+  },
+  "ricordare": {
+    "syn": [
+      "rammentare",
+      "menzionare"
+    ],
+    "ant": [
+      "dimenticare"
+    ]
+  },
+  "dare": {
+    "syn": [
+      "consegnare",
+      "elargire"
+    ],
+    "ant": [
+      "prendere"
+    ]
+  },
+  "scrivere": {
+    "syn": [
+      "redigere",
+      "annotare"
+    ],
+    "ant": [
+      "cancellare"
+    ]
+  },
+  "leggere": {
+    "syn": [
+      "sfogliare",
+      "studiare"
+    ],
+    "ant": [
+      "ignorare"
+    ]
+  },
+  "mangiare": {
+    "syn": [
+      "nutrirsi",
+      "consumare"
+    ],
+    "ant": [
+      "digiunare"
+    ]
+  },
+  "digiunare": {
+    "syn": [
+      "astenersi dal cibo"
+    ],
+    "ant": [
+      "mangiare"
+    ]
+  },
+  "bere": {
+    "syn": [
+      "sorseggiare",
+      "tracannare"
+    ],
+    "ant": [
+      "astenersi"
+    ]
+  },
+  "astenersi": {
+    "syn": [
+      "rinunciare",
+      "non bere"
+    ],
+    "ant": [
+      "bere"
+    ]
+  },
+  "dormire": {
+    "syn": [
+      "riposare",
+      "assopirsi"
+    ],
+    "ant": [
+      "vegliare"
+    ]
+  },
+  "vegliare": {
+    "syn": [
+      "stare sveglio",
+      "vegliar"
+    ],
+    "ant": [
+      "dormire"
+    ]
+  },
+  "ridere": {
+    "syn": [
+      "sorridere",
+      "sghignazzare"
+    ],
+    "ant": [
+      "piangere"
+    ]
+  },
+  "piangere": {
+    "syn": [
+      "singhiozzare",
+      "lacrimare"
+    ],
+    "ant": [
+      "ridere"
+    ]
+  },
+  "complicare": {
+    "syn": [
+      "ingarbugliare",
+      "intricare"
+    ],
+    "ant": [
+      "semplificare"
+    ]
+  },
+  "semplificare": {
+    "syn": [
+      "agevolare",
+      "spianare"
+    ],
+    "ant": [
+      "complicare"
+    ]
+  },
+  "spiegare": {
+    "syn": [
+      "illustrare",
+      "chiarire"
+    ],
+    "ant": [
+      "confondere"
+    ]
+  },
+  "confondere": {
+    "syn": [
+      "offuscare",
+      "ingarbugliare"
+    ],
+    "ant": [
+      "spiegare"
+    ]
+  },
+  "creare": {
+    "syn": [
+      "generare",
+      "produrre"
+    ],
+    "ant": [
+      "distruggere"
+    ]
+  },
+  "distruggere": {
+    "syn": [
+      "annientare",
+      "demolire"
+    ],
+    "ant": [
+      "creare"
+    ]
+  },
+  "caloroso": {
+    "syn": [
+      "affettuoso",
+      "cordiale"
+    ],
+    "ant": [
+      "freddo"
+    ]
+  },
+  "attivo": {
+    "syn": [
+      "dinamico",
+      "operoso"
+    ],
+    "ant": [
+      "passivo"
+    ]
+  },
+  "passivo": {
+    "syn": [
+      "inerte",
+      "apatico"
+    ],
+    "ant": [
+      "attivo"
+    ]
+  },
+  "audace": {
+    "syn": [
+      "temerario",
+      "intraprendente"
+    ],
+    "ant": [
+      "prudente"
+    ]
+  },
+  "cauto": {
+    "syn": [
+      "prudente",
+      "accorto"
+    ],
+    "ant": [
+      "avventato"
+    ]
+  },
+  "avventato": {
+    "syn": [
+      "sconsiderato",
+      "imprudente"
+    ],
+    "ant": [
+      "cauto"
+    ]
+  },
+  "leale": {
+    "syn": [
+      "fedele",
+      "onesto"
+    ],
+    "ant": [
+      "sleale"
+    ]
+  },
+  "sleale": {
+    "syn": [
+      "infedele",
+      "disonesto"
+    ],
+    "ant": [
+      "leale"
+    ]
+  },
+  "superbo": {
+    "syn": [
+      "altero",
+      "arrogante"
+    ],
+    "ant": [
+      "umile"
+    ]
+  },
+  "cordiale": {
+    "syn": [
+      "amichevole",
+      "gentile"
+    ],
+    "ant": [
+      "ostile"
+    ]
+  },
+  "ostile": {
+    "syn": [
+      "antipatico",
+      "avverso"
+    ],
+    "ant": [
+      "cordiale"
+    ]
+  },
+  "creativo": {
+    "syn": [
+      "originale",
+      "ingegnoso"
+    ],
+    "ant": [
+      "banale"
+    ]
+  },
+  "banale": {
+    "syn": [
+      "scontato",
+      "piatto"
+    ],
+    "ant": [
+      "creativo"
+    ]
+  },
+  "curioso": {
+    "syn": [
+      "interessato",
+      "indagatore"
+    ],
+    "ant": [
+      "indifferente"
+    ]
+  },
+  "indifferente": {
+    "syn": [
+      "apatico",
+      "disinteressato"
+    ],
+    "ant": [
+      "curioso"
+    ]
+  },
+  "bello": {
+    "syn": [
+      "gradevole",
+      "avvenente",
+      "splendido"
+    ],
+    "ant": [
+      "brutto"
+    ]
+  },
+  "brutto": {
+    "syn": [
+      "sgradevole",
+      "orrendo"
+    ],
+    "ant": [
+      "bello"
+    ]
+  },
+  "usato": {
+    "syn": [
+      "consumato",
+      "logoro"
+    ],
+    "ant": [
+      "nuovo"
+    ]
+  },
+  "nocivo": {
+    "syn": [
+      "dannoso",
+      "sfavorevole"
+    ],
+    "ant": [
+      "utile"
+    ]
+  },
+  "ordinario": {
+    "syn": [
+      "comune",
+      "normale"
+    ],
+    "ant": [
+      "straordinario"
+    ]
+  },
+  "straordinario": {
+    "syn": [
+      "eccezionale",
+      "insolito"
+    ],
+    "ant": [
+      "ordinario"
+    ]
+  },
+  "perfetto": {
+    "syn": [
+      "impeccabile",
+      "ottimo"
+    ],
+    "ant": [
+      "difettoso"
+    ]
+  },
+  "difettoso": {
+    "syn": [
+      "imperfetto",
+      "fallace"
+    ],
+    "ant": [
+      "perfetto"
+    ]
+  },
+  "approssimativo": {
+    "syn": [
+      "vago",
+      "impreciso"
+    ],
+    "ant": [
+      "preciso"
+    ]
+  },
+  "frequente": {
+    "syn": [
+      "assiduo",
+      "abituale"
+    ],
+    "ant": [
+      "raro"
+    ]
+  },
+  "continuo": {
+    "syn": [
+      "costante",
+      "perenne"
+    ],
+    "ant": [
+      "intermittente"
+    ]
+  },
+  "intermittente": {
+    "syn": [
+      "discontinuo",
+      "saltuario"
+    ],
+    "ant": [
+      "continuo"
+    ]
+  },
+  "temporaneo": {
+    "syn": [
+      "provvisorio",
+      "momentaneo"
+    ],
+    "ant": [
+      "permanente"
+    ]
+  },
+  "permanente": {
+    "syn": [
+      "stabile",
+      "duraturo"
+    ],
+    "ant": [
+      "temporaneo"
+    ]
+  },
+  "carico": {
+    "syn": [
+      "energico",
+      "tonico"
+    ],
+    "ant": [
+      "scarico"
+    ]
+  },
+  "scarico": {
+    "syn": [
+      "spento",
+      "esaurito"
+    ],
+    "ant": [
+      "carico"
+    ]
+  },
+  "sveglio": {
+    "syn": [
+      "vigile",
+      "allerta"
+    ],
+    "ant": [
+      "assonnato"
+    ]
+  },
+  "assonnato": {
+    "syn": [
+      "intorpidito",
+      "addormentato"
+    ],
+    "ant": [
+      "sveglio"
+    ]
+  },
+  "chiedere": {
+    "syn": [
+      "domandare",
+      "richiedere"
+    ],
+    "ant": [
+      "rispondere"
+    ]
+  },
+  "rispondere": {
+    "syn": [
+      "replicare",
+      "controbbattere"
+    ],
+    "ant": [
+      "chiedere"
+    ]
+  },
+  "convincere": {
+    "syn": [
+      "persuadere",
+      "indurre"
+    ],
+    "ant": [
+      "dissuadere"
+    ]
+  },
+  "dissuadere": {
+    "syn": [
+      "scoraggiare",
+      "distogliere"
+    ],
+    "ant": [
+      "convincere"
+    ]
+  },
+  "lodare": {
+    "syn": [
+      "elogiare",
+      "esaltare"
+    ],
+    "ant": [
+      "criticare"
+    ]
+  },
+  "criticare": {
+    "syn": [
+      "biasimare",
+      "censurare"
+    ],
+    "ant": [
+      "lodare"
+    ]
+  },
+  "promettere": {
+    "syn": [
+      "assicurare",
+      "garantire"
+    ],
+    "ant": [
+      "mentire"
+    ]
+  },
+  "mentire": {
+    "syn": [
+      "ingannare",
+      "falsare"
+    ],
+    "ant": [
+      "promettere"
+    ]
+  },
+  "sicuro": {
+    "syn": [
+      "certo",
+      "affidabile"
+    ],
+    "ant": [
+      "insicuro"
+    ]
+  },
+  "insicuro": {
+    "syn": [
+      "incerto",
+      "precario"
+    ],
+    "ant": [
+      "sicuro"
+    ]
+  },
+  "protetto": {
+    "syn": [
+      "tutelato",
+      "al sicuro"
+    ],
+    "ant": [
+      "esposto"
+    ]
+  },
+  "esposto": {
+    "syn": [
+      "vulnerabile",
+      "scoperto"
+    ],
+    "ant": [
+      "protetto"
+    ]
+  },
+  "stabile": {
+    "syn": [
+      "solido",
+      "fermo"
+    ],
+    "ant": [
+      "instabile"
+    ]
+  },
+  "instabile": {
+    "syn": [
+      "precario",
+      "ballerino"
+    ],
+    "ant": [
+      "stabile"
+    ]
+  },
+  "vero": {
+    "syn": [
+      "reale",
+      "autentico"
+    ],
+    "ant": [
+      "falso"
+    ]
+  },
+  "falso": {
+    "syn": [
+      "artefatto",
+      "bugiardo"
+    ],
+    "ant": [
+      "vero"
+    ]
+  },
+  "corretto": {
+    "syn": [
+      "giusto",
+      "esatto"
+    ],
+    "ant": [
+      "errato"
+    ]
+  },
+  "errato": {
+    "syn": [
+      "sbagliato",
+      "inesatto"
+    ],
+    "ant": [
+      "corretto"
+    ]
+  },
+  "oscuro": {
+    "syn": [
+      "ambiguo",
+      "confuso"
+    ],
+    "ant": [
+      "chiaro"
     ]
   }
 }
