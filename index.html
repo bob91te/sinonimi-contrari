@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sinonimi & Contrari — v4 (release)</title>
+  <meta name="theme-color" content="#151933">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <style>
+    :root{--bg:#0f1220;--card:#151933;--muted:#8b90a6;--text:#e8ecff;--primary:#6ea8fe;--ok:#45d483;--err:#ff6b6b;--br:#2a2f54;--r:16px}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:radial-gradient(1200px 800px at 80% -10%,#1c2248 0%,var(--bg) 45%);color:var(--text)}
+    .app{max-width:960px;margin:24px auto;padding:16px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+    .card{background:var(--card);border:1px solid var(--br);border-radius:var(--r);padding:16px}
+    .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    select,input{background:#0f1430;border:1px solid var(--br);color:var(--text);border-radius:12px;padding:10px 12px}
+    button{background:#24305a;border:1px solid #334074;color:var(--text);border-radius:12px;padding:10px 14px;cursor:pointer}
+    button.primary{background:var(--primary);color:#0b1026;font-weight:700}
+    .word{font-size:34px;font-weight:800;margin:8px 0}
+    .opts{display:grid;grid-template-columns:1fr;gap:8px}
+    @media(min-width:640px){.opts{grid-template-columns:1fr 1fr}}
+    .opt{background:#0f1430;border:1px solid var(--br);border-radius:12px;padding:12px;text-align:center;cursor:pointer}
+    .progress{height:8px;background:#0f1430;border:1px solid var(--br);border-radius:999px;overflow:hidden;margin-top:8px}
+    .progress>div{height:100%;background:linear-gradient(90deg,var(--primary),#9ad0ff);width:0}
+    .stat{background:#0f1430;border:1px solid var(--br);border-radius:12px;padding:10px 12px}
+    .stat .k{font-size:12px;color:var(--muted)} .stat .v{font-size:18px;font-weight:700}
+    .msg{min-height:22px;color:var(--muted);margin-top:6px}
+    .list{max-height:220px;overflow:auto;border:1px solid var(--br);border-radius:12px;padding:8px;background:#0f1430}
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Sinonimi & Contrari — v4</h1>
+      <div class="row">
+        <button id="dailyBtn">Sfida giornaliera</button>
+        <button id="shareBtn" disabled>Condividi</button>
+        <button id="helpBtn">Tutorial</button>
+      </div>
+    </header>
+    <div class="card">
+      <div class="row">
+        <div><label>Pack</label>
+          <select id="packSel"><option value="it_core" selected>Italiano</option><option value="en_core">English</option></select>
+        </div>
+        <div><label>Modalità</label>
+          <select id="mode"><option value="syn">Sinonimi</option><option value="ant">Contrari</option><option value="mix" selected>Misto</option></select>
+        </div>
+        <div><label>Difficoltà</label>
+          <select id="difficulty"><option value="easy" selected>Facile</option><option value="medium">Media</option><option value="hard">Difficile</option></select>
+        </div>
+        <div><label>Timer</label>
+          <select id="timer"><option value="60" selected>60s</option><option value="90">90s</option><option value="120">120s</option></select>
+        </div>
+        <label><input type="checkbox" id="typoOK" checked> ±1 errore</label>
+        <label><input type="checkbox" id="pluralOK" checked> Plurali</label>
+        <label><input type="checkbox" id="soundOK" checked> Suoni</label>
+        <button id="startBtn" class="primary">Avvia</button>
+        <button id="resetBtn">Reset</button>
+      </div>
+      <div class="row" style="margin-top:8px">
+        <div class="stat"><div class="k">Tempo</div><div class="v" id="time">—</div></div>
+        <div class="stat"><div class="k">Punti</div><div class="v" id="score">0</div></div>
+        <div class="stat"><div class="k">Combo</div><div class="v" id="combo">x1</div></div>
+        <div class="stat"><div class="k">Migliore</div><div class="v" id="best">0</div></div>
+      </div>
+      <div class="progress"><div id="timeBar"></div></div>
+      <div id="questionArea" style="margin-top:12px">
+        <div class="word" id="prompt">—</div>
+        <div class="opts" id="options" style="display:none"></div>
+        <div id="freeArea" class="row" style="display:none">
+          <input id="freeInput" type="text" placeholder="Scrivi la risposta" style="flex:1">
+          <button id="freeOK" class="primary">OK</button>
+        </div>
+        <div class="msg" id="msg"></div>
+      </div>
+      <div class="list"><ol id="history"></ol></div>
+    </div>
+  </div>
+  <script>
+    const $ = s=>document.querySelector(s);
+    const rand = a=> a[Math.floor(Math.random()*a.length)];
+    function stripAccents(s){ return s.normalize('NFD').replace(/\p{Diacritic}+/gu,''); }
+    function normalize(s){ return stripAccents((s||'').trim().toLowerCase()); }
+    function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+    function lev(a,b){ const m=a.length,n=b.length; const dp=Array.from({length:m+1},()=>Array(n+1).fill(0)); for(let i=0;i<=m;i++) dp[i][0]=i; for(let j=0;j<=n;j++) dp[0][j]=j; for(let i=1;i<=m;i++){ for(let j=1;j<=n;j++){ const cost = a[i-1]===b[j-1]?0:1; dp[i][j]=Math.min(dp[i-1][j]+1, dp[i][j-1]+1, dp[i-1][j-1]+cost); } } return dp[m][n]; }
+    let DATA={}, STATE={started:false,mode:'mix',diff:'easy',secs:60,timer:null,timeLeft:0,score:0,combo:1,best:0,current:null,correct:null,qcount:0,ok:0,ko:0,pack:'it_core',last:[]};
+    const el={packSel:$('#packSel'),mode:$('#mode'),difficulty:$('#difficulty'),timerSel:$('#timer'),typoOK:$('#typoOK'),pluralOK:$('#pluralOK'),start:$('#startBtn'),reset:$('#resetBtn'),share:$('#shareBtn'),time:$('#time'),timeBar:$('#timeBar'),score:$('#score'),combo:$('#combo'),best:$('#best'),prompt:$('#prompt'),options:$('#options'),msg:$('#msg'),history:$('#history'),freeArea:$('#freeArea'),freeInput:$('#freeInput')};
+    try{ STATE.best=Number(localStorage.getItem('sc_best')||'0')||0; }catch(e){}
+    el.best.textContent=String(STATE.best);
+    function setMsg(t,k=''){ el.msg.className='msg '+(k||''); el.msg.textContent=t; }
+    function tick(){ STATE.timeLeft--; updateTime(); if(STATE.timeLeft<=0){ end(); } }
+    function updateTime(){ el.time.textContent=STATE.timeLeft+'s'; el.timeBar.style.width=Math.max(0,Math.min(100,(STATE.timeLeft/STATE.secs)*100))+'%'; }
+    function addHistory(t){ const li=document.createElement('li'); li.textContent=t; el.history.appendChild(li); }
+    function wordPool(){ return Object.keys(DATA); }
+    function pick(mode){ const w=rand(wordPool()); const syn=DATA[w].syn||[],ant=DATA[w].ant||[]; let m=mode==='mix'?(Math.random()<0.5?'syn':'ant'):mode; const arr=(m==='syn'?syn:ant); const correct=arr.length?rand(arr):'—'; return {word:w,m,correct,syn,ant}; }
+    function buildChoices(correct, syn, ant){ const choices=[correct]; const distract=[...syn,...ant,...wordPool()].filter(x=>x && normalize(x)!==normalize(correct)); shuffle(distract); const want=(STATE.diff==='easy')?4:6; for(const d of distract){ if(choices.length>=want) break; if(!choices.includes(d)) choices.push(d); } return shuffle(choices.slice(0,want)); }
+    function start(){ STATE.pack=el.packSel.value; STATE.mode=el.mode.value; STATE.diff=el.difficulty.value; STATE.secs=Number(el.timerSel.value)||60; STATE.timeLeft=STATE.secs; STATE.score=0; STATE.combo=1; STATE.qcount=0; STATE.ok=0; STATE.ko=0; STATE.started=true; el.options.style.display=(STATE.diff==='hard')?'none':'grid'; el.freeArea.style.display=(STATE.diff==='hard')?'flex':'none'; el.history.innerHTML=''; setMsg(''); nextQuestion(); clearInterval(STATE.timer); STATE.timer=setInterval(tick,1000); updateTime(); el.score.textContent='0'; el.combo.textContent='x1'; el.share.disabled=true; if(STATE.diff==='hard'){ el.freeInput.value=''; el.freeInput.focus(); } }
+    function end(){ STATE.started=false; clearInterval(STATE.timer); setMsg('Tempo scaduto. Punteggio: '+STATE.score,''); if(STATE.score>STATE.best){ STATE.best=STATE.score; try{localStorage.setItem('sc_best', String(STATE.best));}catch(e){}; el.best.textContent=String(STATE.best); setMsg('Nuovo record!','ok'); } el.share.disabled=false; }
+    function nextQuestion(){ const q=pick(STATE.mode); STATE.current=q; STATE.correct=q.correct; STATE.qcount++; el.prompt.textContent=(q.m==='syn'?'Sinonimo di':'Contrario di')+' “'+q.word+'”'; if(STATE.diff==='hard'){ setMsg('Scrivi una risposta valida.'); } else { const choices=buildChoices(q.correct,q.syn,q.ant); el.options.innerHTML=''; choices.forEach(c=>{ const b=document.createElement('button'); b.className='opt'; b.textContent=c; b.addEventListener('click',()=>check(c,b)); el.options.appendChild(b); }); } }
+    function scoreDelta(){ const base=100; let mult=STATE.combo; if(STATE.timeLeft/STATE.secs>0.66) mult+=0.5; return Math.round(base*mult); }
+    function okFeedback(){ setMsg('Corretto!','ok'); STATE.combo=Math.min(STATE.combo+1,5); el.combo.textContent='x'+STATE.combo; STATE.score+=scoreDelta(); el.score.textContent=String(STATE.score); STATE.ok++; STATE.last.push('🟩'); }
+    function koFeedback(){ setMsg('Sbagliato.','err'); STATE.combo=1; el.combo.textContent='x1'; STATE.timeLeft=Math.max(0,STATE.timeLeft-3); updateTime(); STATE.ko++; STATE.last.push('🟥'); }
+    function matchesAnswer(ans, targets){ if(targets.has(ans)) return true; if(el.pluralOK.checked){ for(const t of targets){ const vars=new Set([t, t.replace(/o$/,'i'), t.replace(/a$/,'e'), t.replace(/e$/,'i')]); if(vars.has(ans)) return true; } } if(el.typoOK.checked){ for(const t of targets){ if(lev(ans,t)<=1) return true; } } return false; }
+    function check(value, btn=null){ if(!STATE.started) return; const ans=normalize(value); const {m,syn,ant}=STATE.current; const valid=(m==='syn'?syn:ant).map(x=>normalize(x)); const ok=matchesAnswer(ans,new Set(valid)); if(btn){ btn.classList.add(ok?'ok':'err'); } addHistory((m==='syn'?'SIN':'ANT')+': '+STATE.current.word+' → '+value+(ok?' ✓':' ✗ (corretto: '+STATE.correct+')')); if(ok) okFeedback(); else koFeedback(); setTimeout(nextQuestion,320); }
+    $('#freeOK').addEventListener('click',()=>{ const v=el.freeInput.value; if(!v) return; check(v,null); el.freeInput.value=''; el.freeInput.focus(); });
+    document.addEventListener('keydown',(e)=>{ if(e.key==='Enter' && STATE.started && STATE.diff==='hard'){ $('#freeOK').click(); } });
+    $('#startBtn').addEventListener('click', start);
+    $('#resetBtn').addEventListener('click', ()=>{ STATE.started=false; clearInterval(STATE.timer); setMsg('Reset.'); el.prompt.textContent='—'; el.options.innerHTML=''; el.history.innerHTML=''; el.score.textContent='0'; el.combo.textContent='x1'; el.time.textContent='—'; el.timeBar.style.width='0%'; });
+    $('#dailyBtn').addEventListener('click', ()=>{ const iso=(new Date()).toISOString().slice(0,10); STATE.mode=['syn','ant','mix'][Number(iso.replace(/-/g,''))%3]; el.mode.value=STATE.mode; el.difficulty.value=(Number(iso.replace(/-/g,''))%2)?'easy':'hard'; start(); setMsg('Sfida giornaliera '+iso); });
+    $('#helpBtn').addEventListener('click', ()=> alert('Facile/Media: scelta multipla. Difficile: scrittura libera (accenti/plurali/±1).'));
+    $('#shareBtn').addEventListener('click', async ()=>{ const grid=STATE.last.join(''); const txt=`S&C ${new Date().toISOString().slice(0,10)}\n${grid}\nScore ${STATE.score} | Combo ${STATE.combo} | Q:${STATE.qcount}`; try{ await navigator.clipboard.writeText(txt); setMsg('Copiato negli appunti.','ok'); }catch(e){ setMsg('Copia non riuscita.','err'); } });
+    $('#packSel').addEventListener('change', async ()=>{ const val=$('#packSel').value; const res=await fetch('./packs/'+val+'.json'); DATA=await res.json(); setMsg(val==='it_core'?'Pack IT caricato.':'EN pack loaded.'); });
+    (async ()=>{ const res=await fetch('./packs/it_core.json'); DATA=await res.json(); })();
+  </script>
+</body>
+</html>
